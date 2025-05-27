@@ -4,11 +4,7 @@ import { DefaultLoginLayoutComponent } from './components/default-login-layout/d
 
 export const routes: Routes = [
   {
-    path: "login",
+    path: "",
     component: LoginComponent
-  },
-  {
-    path: "login2",
-    component: DefaultLoginLayoutComponent
   }
 ];
