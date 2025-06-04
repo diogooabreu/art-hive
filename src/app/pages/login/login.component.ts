@@ -1,3 +1,4 @@
+import { NotificationsService } from './../../services/notifications-service.service';
 import { UserService } from './../../services/user-service.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -18,20 +19,20 @@ export class LoginComponent {
 
   constructor(
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private notification: NotificationsService
   ) { }
 
   handleSubmit() {
     if (!this.email || !this.password) {
-      alert('Preencha todos os campos antes de continuar.');
+      this.notification.info("Please fill in all fields before continuing.", "Attention");
     } else {
       this.userService.login(this.email, this.password).subscribe(user => {
         if (user) {
-          alert('login successful');
+          this.notification.succes("Login successful", "Wellcome back");
           this.router.navigate(['/home']);
         } else {
-          alert(
-            'Invalid email or password, please try again');
+          this.notification.error('Invalid email or password, please try again', "Error");
         }
       });
     }

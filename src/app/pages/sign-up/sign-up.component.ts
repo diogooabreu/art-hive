@@ -3,6 +3,7 @@ import User from '../../Model/user';
 import { UserService } from '../../services/user-service.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { NotificationsService } from '../../services/notifications-service.service';
 @Component({
   selector: 'sign-up',
   imports: [
@@ -18,19 +19,20 @@ export class SignUpComponent {
 
   constructor(
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private notification: NotificationsService
   ) { }
 
   handleSignUp() {
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
 
     if (!this.email || !this.password) {
-      alert('Preencha todos os campos antes de continuar.');
+      this.notification.info("Please fill in all fields before continuing.", "Attention");
       return;
     }
 
     if (!passwordRegex.test(this.password)) {
-      alert('A senha deve conter no mínimo 8 caracteres, com pelo menos uma letra maiúscula, uma minúscula, um número e um símbolo.');
+      this.notification.error("The password must contain at least 8 characters, with at least one uppercase letter, one lowercase letter, one number and one symbol.");
       return;
     }
 
@@ -38,7 +40,7 @@ export class SignUpComponent {
     newUser.name = this.name;
 
     this.userService.createUser(newUser).subscribe(() => {
-      alert("Bem vindo ^^");
+      this.notification.succes("Wellcome! ^^", "Hello");
       this.router.navigate(['home'])
     })
   }
