@@ -7,15 +7,23 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 export const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'auth',
+    pathMatch:'full',
+  },
+  {
     path: 'auth',
     component: LoginLayoutComponent,
-
     children: [
+      {
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full',
+      },
       {
         path: 'login',
         component: LoginComponent,
       },
-
       {
         path: 'signUp',
         component: SignUpComponent,
@@ -24,12 +32,12 @@ export const routes: Routes = [
   },
 
   {
-    path: '',
+    path: 'home',
     component: HomeLayoutComponent,
 
     children: [
       {
-        path: 'home',
+        path: '',
         component: HomeComponent,
       },
     ],

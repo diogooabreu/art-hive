@@ -1,13 +1,10 @@
 import { UserService } from './../../services/user-service.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { DefaultLoginLayoutComponent } from '../../components/default-login-layout/default-login-layout.component';
 
 @Component({
   selector: 'app-login',
-  imports: [
-    DefaultLoginLayoutComponent
-  ],
+  imports: [],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -38,6 +35,6 @@ export class LoginComponent {
   }
 
   handleNavigate() {
-    this.router.navigate(['signUp']);
+    this.router.navigate(['/auth/signUp']);
   }
 }
