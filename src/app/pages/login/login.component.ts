@@ -13,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class LoginComponent {
-  username = '';
+  email = '';
   password = '';
 
   constructor(
@@ -22,19 +22,19 @@ export class LoginComponent {
   ) { }
 
   handleSubmit() {
-    if (!this.username || !this.password) {
+    if (!this.email || !this.password) {
       alert('Preencha todos os campos antes de continuar.');
+    } else {
+      this.userService.login(this.email, this.password).subscribe(user => {
+        if (user) {
+          alert('login successful');
+          this.router.navigate(['/home']);
+        } else {
+          alert(
+            'Invalid email or password, please try again');
+        }
+      });
     }
-
-    this.userService.login(this.username, this.password).subscribe(user => {
-      if (user) {
-        alert('login successful');
-        this.router.navigate(['home']);
-      } else {
-        alert(
-          'Invalid email or password, please try again');
-      }
-    });
   }
 
   handleNavigate() {
