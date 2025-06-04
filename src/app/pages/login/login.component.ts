@@ -1,16 +1,19 @@
 import { UserService } from './../../services/user-service.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
-  imports: [],
+  imports: [
+    FormsModule
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 
 export class LoginComponent {
-  email = '';
+  username = '';
   password = '';
 
   constructor(
@@ -19,11 +22,11 @@ export class LoginComponent {
   ) { }
 
   handleSubmit() {
-    if (!this.email || !this.password) {
+    if (!this.username || !this.password) {
       alert('Preencha todos os campos antes de continuar.');
     }
 
-    this.userService.login(this.email, this.password).subscribe(user => {
+    this.userService.login(this.username, this.password).subscribe(user => {
       if (user) {
         alert('login successful');
         this.router.navigate(['home']);
