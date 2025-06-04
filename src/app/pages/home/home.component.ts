@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../components/header/header.component';
-import { FooterComponent } from '../../components/footer/footer.component';
-import { HomeViewComponent } from '../../components/home-view/home-view.component';
+import { ArtworksComponent } from '../../components/artworks/artworks.component';
 
 @Component({
   selector: 'app-home',
-  imports: [HomeViewComponent, FooterComponent, HomeViewComponent],
+  imports: [ArtworksComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
