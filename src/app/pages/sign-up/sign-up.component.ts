@@ -24,7 +24,7 @@ export class SignUpComponent {
   ) { }
 
   handleSignUp() {
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+    const passwordRegex = /^[a-zA-Z0-9]+$/;
 
     if (!this.email || !this.password) {
       this.notification.info("Please fill in all fields before continuing.", "Attention");
@@ -32,7 +32,7 @@ export class SignUpComponent {
     }
 
     if (!passwordRegex.test(this.password)) {
-      this.notification.error("The password must contain at least 8 characters, with at least one uppercase letter, one lowercase letter, one number and one symbol.");
+      this.notification.error("The password must contain letters and numbers.");
       return;
     }
 
@@ -40,6 +40,7 @@ export class SignUpComponent {
     newUser.name = this.name;
 
     this.userService.createUser(newUser).subscribe(() => {
+      localStorage.setItem('user', JSON.stringify('user'));
       this.notification.succes("Wellcome! ^^", "Hello");
       this.router.navigate(['home'])
     })

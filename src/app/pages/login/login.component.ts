@@ -29,6 +29,7 @@ export class LoginComponent {
     } else {
       this.userService.login(this.email, this.password).subscribe(user => {
         if (user) {
+          localStorage.setItem('user', JSON.stringify(user));
           this.notification.succes("Login successful", "Wellcome back");
           this.router.navigate(['/home']);
         } else {
