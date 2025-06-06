@@ -4,6 +4,7 @@ import { LoginLayoutComponent } from './layouts/login-layout/login-layout.compon
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
   {
@@ -42,4 +43,8 @@ export const routes: Routes = [
       },
     ],
   },
+  {
+    path: '**',
+    component: NotFoundComponent,
+  }
 ];

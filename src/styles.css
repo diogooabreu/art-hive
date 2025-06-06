@@ -4,3 +4,7 @@
 @tailwind utilities;
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
+
+html, body {
+  @apply h-full m-0 p-0;
+}
