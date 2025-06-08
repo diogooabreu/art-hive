@@ -24,7 +24,7 @@ export class SignUpComponent {
   ) { }
 
   handleSignUp() {
-    const passwordRegex = /^[a-zA-Z0-9]+$/;
+    const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d).+$/;
 
     if (!this.email || !this.password) {
       this.notification.info("Please fill in all fields before continuing.", "Attention");
