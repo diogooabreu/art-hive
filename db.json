@@ -19,7 +19,7 @@
       "id": 1,
       "title": "O Último Dragão",
       "description": "Ilustração conceitual para um projeto pessoal de fantasia. Feito com Photoshop e muita paciência.",
-      "imageUrl": "https://picsum.photos/seed/a1/600/900",
+      "imageUrl": "assets/uploads/1/artwork.jpg",
       "artist_name": "LeoValente",
       "friends": {
         "friend_1": "https://api.dicebear.com/8.x/adventurer/svg?seed=Ricardo",
@@ -31,7 +31,7 @@
       "id": 2,
       "title": "Estudo de Personagem: Yumi",
       "description": "Minha nova personagem original (OC). Ela é uma detetive mágica que vive em uma metrópole futurista.",
-      "imageUrl": "https://picsum.photos/seed/b2/600/800",
+      "imageUrl": "assets/uploads/2/artwork.jpg",
       "artist_name": "NekoHime",
       "friends": {
         "friend_1": "https://api.dicebear.com/8.x/pixel-art/svg?seed=Ana",
@@ -43,7 +43,7 @@
       "id": 3,
       "title": "Mercado de Neón",
       "description": "Uma viela movimentada em uma cidade cyberpunk. Inspirado em Blade Runner e Ghost in the Shell.",
-      "imageUrl": "https://picsum.photos/seed/c3/800/600",
+      "imageUrl": "assets/uploads/3/artwork.jpg",
       "artist_name": "CyberForge88",
       "friends": {
         "friend_1": "https://api.dicebear.com/8.x/bottts/svg?seed=Vex",
@@ -55,7 +55,7 @@
       "id": 4,
       "title": "Café da Tarde",
       "description": "Uma cena quentinha para aquecer o coração. Adoro desenhar pequenos momentos do dia a dia.",
-      "imageUrl": "https://picsum.photos/seed/d4/700/700",
+      "imageUrl": "assets/uploads/4/artwork.jpg",
       "artist_name": "mari.ilustra",
       "friends": {
         "friend_1": "https://api.dicebear.com/8.x/notionists/svg?seed=Eduarda",
@@ -67,7 +67,7 @@
       "id": 5,
       "title": "Cachoeira de Pixels",
       "description": "Pixel art isométrico de uma cena da natureza. Paleta de cores limitada a 16 cores.",
-      "imageUrl": "https://picsum.photos/seed/e5/800/600",
+      "imageUrl": "assets/uploads/5/artwork.jpg",
       "artist_name": "BitMapper",
       "friends": {
         "friend_1": "https://api.dicebear.com/8.x/identicon/svg?seed=Byte",
@@ -79,7 +79,7 @@
       "id": 6,
       "title": "Ressonância",
       "description": "Pintura digital abstrata explorando a interação entre cores e formas. Cada um vê uma coisa.",
-      "imageUrl": "https://picsum.photos/seed/f6/600/900",
+      "imageUrl": "assets/uploads/6/artwork.jpg",
       "artist_name": "FluxoVisual",
       "friends": {
         "friend_1": "https://api.dicebear.com/8.x/shapes/svg?seed=Circulo",
@@ -91,7 +91,7 @@
       "id": 7,
       "title": "Pôr do Sol no Parque Barigui",
       "description": "Tentando capturar as cores incríveis do fim de tarde em Curitiba. Feito em aquarela digital.",
-      "imageUrl": "https://picsum.photos/seed/g7/800/600",
+      "imageUrl": "assets/uploads/7/artwork.jpg",
       "artist_name": "aquarela.do.sul",
       "friends": {
         "friend_1": "https://api.dicebear.com/8.x/personas/svg?seed=Heitor",
@@ -103,7 +103,7 @@
       "id": 8,
       "title": "Guardião do Templo",
       "description": "Fan art inspirada no meu jogo favorito do ano. Esse chefe de fase foi épico!",
-      "imageUrl": "https://picsum.photos/seed/h8/600/800",
+      "imageUrl": "assets/uploads/8/artwork.jpg",
       "artist_name": "GamerArtz",
       "friends": {
         "friend_1": "https://api.dicebear.com/8.x/micah/svg?seed=Knight",
@@ -115,7 +115,7 @@
       "id": 9,
       "title": "Guerreiro do Deserto",
       "description": "Rascunhos e estudos para o design de um novo personagem. Explorando silhuetas e equipamentos.",
-      "imageUrl": "https://picsum.photos/seed/i9/600/900",
+      "imageUrl": "assets/uploads/9/artwork.jpg",
       "artist_name": "RascunhoRapido",
       "friends": {
         "friend_1": "https://api.dicebear.com/8.x/adventurer-neutral/svg?seed=Kai",
@@ -127,7 +127,7 @@
       "id": 10,
       "title": "Capivara de Pelúcia",
       "description": "Não resisti e tive que desenhar a criaturinha mais fofa do Brasil em formato de pelúcia.",
-      "imageUrl": "https://picsum.photos/seed/j10/700/700",
+      "imageUrl": "assets/uploads/10/artwork.jpg",
       "artist_name": "Fofurices",
       "friends": {
         "friend_1": "https://api.dicebear.com/8.x/fun-emoji/svg?seed=Tuca",
@@ -139,7 +139,7 @@
       "id": 11,
       "title": "Exploradora Cósmica",
       "description": "Arte de uma astronauta descobrindo um novo planeta. Amo desenhar o espaço!",
-      "imageUrl": "https://picsum.photos/seed/k11/600/800",
+      "imageUrl": "assets/uploads/11/artwork.jpg",
       "artist_name": "AstroJunkie",
       "friends": {
         "friend_1": "https://api.dicebear.com/8.x/lorelei/svg?seed=Orion",
@@ -151,7 +151,7 @@
       "id": 12,
       "title": "Refúgio na Floresta",
       "description": "Uma cabana tranquila no meio da mata. O lugar perfeito para relaxar e desenhar.",
-      "imageUrl": "https://picsum.photos/seed/l12/800/600",
+      "imageUrl": "assets/uploads/12/artwork.jpg",
       "artist_name": "WoodlandSketch",
       "friends": {
         "friend_1": "https://api.dicebear.com/8.x/initials/svg?seed=Otavio",
