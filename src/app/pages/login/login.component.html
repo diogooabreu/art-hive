@@ -19,7 +19,12 @@
   />
   <button
     type="submit"
-    class="w-full m-2 bg-purple-600 text-white font-semibold py-3 rounded hover:bg-blue-700 transition duration-200"
+    class="w-full m-2 font-semibold py-3 rounded transition duration-200"
+    [disabled]="isFormInvalid"
+    [ngClass]="{
+      'bg-gray-400 cursor-not-allowed': isFormInvalid,
+      'bg-purple-600 hover:bg-purple-700': !isFormInvalid
+    }"
   >Entrar</button>
   <button
     type="button"
