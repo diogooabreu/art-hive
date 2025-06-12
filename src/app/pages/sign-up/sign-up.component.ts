@@ -4,10 +4,12 @@ import { UserService } from '../../services/user-service.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NotificationsService } from '../../services/notifications-service.service';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'sign-up',
   imports: [
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
@@ -26,11 +28,6 @@ export class SignUpComponent {
   handleSignUp() {
     const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d).+$/;
 
-    if (!this.email || !this.password) {
-      this.notification.info("Please fill in all fields before continuing.", "Attention");
-      return;
-    }
-
     if (!passwordRegex.test(this.password)) {
       this.notification.error("The password must contain letters and numbers.");
       return;
@@ -44,6 +41,10 @@ export class SignUpComponent {
       this.notification.succes("Wellcome! ^^", "Hello");
       this.router.navigate(['home'])
     })
+  }
+
+  get isFormInvalid(): boolean {
+    return !this.email || !this.password;
   }
 
   handleNavigate() {

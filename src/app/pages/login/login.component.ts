@@ -26,9 +26,6 @@ export class LoginComponent {
   ) { }
 
   handleSubmit() {
-    if (!this.email || !this.password) {
-      this.notification.info("Please fill in all fields before continuing.", "Attention");
-    } else {
       this.userService.login(this.email, this.password).subscribe(user => {
         if (user) {
           localStorage.setItem('user', JSON.stringify(user));
@@ -38,7 +35,6 @@ export class LoginComponent {
           this.notification.error('Invalid email or password, please try again', "Error");
         }
       });
-    }
   }
 
   get isFormInvalid(): boolean {
