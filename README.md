@@ -81,35 +81,31 @@ $ git checkout develop
 $ code .
 ```
 
+### Mudar permissão do executavel
+
+```
+$ chmod +x run
+```
+
 ### Instalar as dependências
 
 ```
-$ npm i
+$ ./run install
 ```
 
-### Instalar o Flowbite
+### Iniciar o JSON server
 
 ```
-$ npm install flowbite --save
-```
-
-### (Opcional) Instalar o [JSON Server](https://www.npmjs.com/package/json-server) globalmente
-
-```
-$ npm i -g json-server
-```
-
-- É opcional porque a dependência já vem cadastrada no arquivo `package.json` para instalação local na pasta `node_modules`
-
-### Executar a API Fake (JSON Server) via:
-
-```
-$ json-server --watch db.json --port 3000
+$ ./run api
 ```
 
 - O comando para execução do JSON Server deve ser aplicado no diretório raiz do projeto, ou seja, que contém o arquivo `db.json` e `routes.json`.
   - Por padrão, a aplicação JSON Server executa no endereço `localhost:3000`
-- Abrir um novo terminal pelo VSCode e então executar o projeto Angular
-  ```
-  $ ng s -o
-  ```
+
+### Executar o Angular
+
+Abrir um novo terminal pelo VSCode e então executar o projeto Angular
+
+```
+$ ng serve -o
+```
