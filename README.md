@@ -83,11 +83,15 @@ $ code .
 
 ### Mudar permissão do executavel
 
+Para executar os comandos abaixo como `./run`, é necessario mudar a permissão do arquivo `run`.
+
 ```
 $ chmod +x run
 ```
 
 ### Instalar as dependências
+
+Para instalar as dependências vamos utilizar os comandos predifinidos dentro do arquivo `run`.
 
 ```
 $ ./run install
