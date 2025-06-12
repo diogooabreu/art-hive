@@ -2,8 +2,8 @@
   <div *ngFor="let n of notifications"
        class="w-80 p-4 rounded-lg shadow-sm border border-gray-300"
        [ngClass]="{
-         'border-green-500 bg-green-500 text-gray-800': n.type === 'success',
-         'border-red-500 bg-red-300 text-white': n.type === 'error',
+         'border-green-500 bg-green-700 text-gray-800': n.type === 'success',
+         'border-red-500 bg-red-700 text-white': n.type === 'error',
          'border-blue-500 bg-yellow-400 text-gray-800': n.type === 'info'
        }"
        role="alert">
