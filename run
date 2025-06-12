@@ -1,0 +1,28 @@
+#!/bin/bash
+
+set -o errexit
+set -o pipefail
+
+function install 
+{
+    echo "Iniciando a instalação do projeto"
+
+    echo "Instalando dependências do package.json"
+    npm install
+    echo "✅ OK"
+
+    echo "Instalando JSON Server"
+    npm install json-server
+    echo "✅ OK"
+
+    echo "Instalando Flowbite"
+    npm install flowbite --save
+    echo "✅ OK"
+}
+
+function api
+{
+   json-server --watch db.json --port 3000
+}
+
+"${@}"
