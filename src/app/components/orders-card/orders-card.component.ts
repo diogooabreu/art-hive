@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import Order from '../../Model/order';
 import { OrdersService } from '../../services/orders-service.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'order-card',
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   templateUrl: './orders-card.component.html',
   styleUrl: './orders-card.component.css'
 })
-export class OrdersCardComponent {
+export class OrdersCardComponent implements OnInit {
   orders: Order[] = [];
 
   constructor(private ordersService: OrdersService) {}

@@ -1,8 +1,8 @@
 export default class Order {
-  private id: string;
-  private email: string;
-  private subject: string;
-  private message: string;
+   id: string;
+   email: string;
+   subject: string;
+   message: string;
 
   public constructor(
     email: string,

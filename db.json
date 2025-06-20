@@ -20,11 +20,17 @@
       "email": "dio@email.com",
       "subject": "Comissions",
       "message": "I liked yours artworks"
+    },
+    {
+      "id": "7",
+      "email": "dio@email.com",
+      "subject": "preço",
+      "message": "kokko"
     }
   ],
   "artworks": [
     {
-      "id": 1,
+      "id": "1",
       "title": "O Último Dragão",
       "description": "Ilustração conceitual para um projeto pessoal de fantasia. Feito com Photoshop e muita paciência.",
       "imageUrl": "assets/uploads/1/artwork.jpg",
@@ -36,7 +42,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Estudo de Personagem: Yumi",
       "description": "Minha nova personagem original (OC). Ela é uma detetive mágica que vive em uma metrópole futurista.",
       "imageUrl": "assets/uploads/2/artwork.jpg",
@@ -48,7 +54,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Mercado de Neón",
       "description": "Uma viela movimentada em uma cidade cyberpunk. Inspirado em Blade Runner e Ghost in the Shell.",
       "imageUrl": "assets/uploads/3/artwork.jpg",
@@ -60,7 +66,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Café da Tarde",
       "description": "Uma cena quentinha para aquecer o coração. Adoro desenhar pequenos momentos do dia a dia.",
       "imageUrl": "assets/uploads/4/artwork.jpg",
@@ -72,7 +78,7 @@
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Cachoeira de Pixels",
       "description": "Pixel art isométrico de uma cena da natureza. Paleta de cores limitada a 16 cores.",
       "imageUrl": "assets/uploads/5/artwork.jpg",
@@ -84,7 +90,7 @@
       }
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Ressonância",
       "description": "Pintura digital abstrata explorando a interação entre cores e formas. Cada um vê uma coisa.",
       "imageUrl": "assets/uploads/6/artwork.jpg",
@@ -96,7 +102,7 @@
       }
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Pôr do Sol no Parque Barigui",
       "description": "Tentando capturar as cores incríveis do fim de tarde em Curitiba. Feito em aquarela digital.",
       "imageUrl": "assets/uploads/7/artwork.jpg",
@@ -108,7 +114,7 @@
       }
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Guardião do Templo",
       "description": "Fan art inspirada no meu jogo favorito do ano. Esse chefe de fase foi épico!",
       "imageUrl": "assets/uploads/8/artwork.jpg",
@@ -120,7 +126,7 @@
       }
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Guerreiro do Deserto",
       "description": "Rascunhos e estudos para o design de um novo personagem. Explorando silhuetas e equipamentos.",
       "imageUrl": "assets/uploads/9/artwork.jpg",
@@ -132,7 +138,7 @@
       }
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Capivara de Pelúcia",
       "description": "Não resisti e tive que desenhar a criaturinha mais fofa do Brasil em formato de pelúcia.",
       "imageUrl": "assets/uploads/10/artwork.jpg",
@@ -144,7 +150,7 @@
       }
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Exploradora Cósmica",
       "description": "Arte de uma astronauta descobrindo um novo planeta. Amo desenhar o espaço!",
       "imageUrl": "assets/uploads/11/artwork.jpg",
@@ -156,7 +162,7 @@
       }
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Refúgio na Floresta",
       "description": "Uma cabana tranquila no meio da mata. O lugar perfeito para relaxar e desenhar.",
       "imageUrl": "assets/uploads/12/artwork.jpg",
