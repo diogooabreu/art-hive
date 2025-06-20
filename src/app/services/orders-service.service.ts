@@ -16,6 +16,18 @@ export class OrdersService {
       .then(res => res ?? this.getEmptyOrder());
   }
 
+  deleteOrder(id: string): Promise<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${id}`)
+      .toPromise()
+      .then(() => { });
+  }
+
+  getOrderById(id: string): Promise<Order>{
+    return this.http.get<Order>(`${this.baseUrl}/${id}`)
+      .toPromise()
+      .then(res => res ?? this.getEmptyOrder());
+  }
+
   getOrdersByEmail(email: string): Promise<Order[]> {
     return this.http.get<Order[]>(`${this.baseUrl}?email=${email}`)
       .toPromise()
