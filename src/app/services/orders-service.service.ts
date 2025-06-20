@@ -13,19 +13,19 @@ export class OrdersService {
   createOrder(order: Order): Promise<Order> {
     return this.http.post<Order>(this.baseUrl, order)
       .toPromise()
-      .then(res => res ?? this.getEmptyOrder()); // garante Order
+      .then(res => res ?? this.getEmptyOrder());
   }
 
   getOrdersByEmail(email: string): Promise<Order[]> {
     return this.http.get<Order[]>(`${this.baseUrl}?email=${email}`)
       .toPromise()
-      .then(res => res ?? []); // garante array
+      .then(res => res ?? []);
   }
 
   getAllOrders(): Promise<Order[]> {
     return this.http.get<Order[]>(this.baseUrl)
       .toPromise()
-      .then(res => res ?? []); // garante array
+      .then(res => res ?? []);
   }
 
   private getEmptyOrder(): Order {
