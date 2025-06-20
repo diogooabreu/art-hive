@@ -6,7 +6,7 @@
   data-drawer-show="drawer-contact"
   aria-controls="drawer-contact"
 >
-  Enviar orçamento
+  Fazer pedido
 </button>
 
 <!-- drawer component -->
@@ -33,7 +33,7 @@
       <path
         d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
       /></svg
-    >Envie um orçamento
+    >Faça seu pedido
   </h5>
   <button
     type="button"
@@ -58,7 +58,7 @@
     </svg>
     <span class="sr-only">Fechar menu</span>
   </button>
-  <form class="mb-6">
+  <form class="mb-6" (ngSubmit)="handleSubmit()">
     <div class="mb-6">
       <label
         for="email"
@@ -67,6 +67,8 @@
       >
       <input
         type="email"
+        [(ngModel)]="email"
+        name="email"
         id="email"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
         placeholder="name@gmail.com"
@@ -81,6 +83,8 @@
       >
       <input
         type="text"
+        [(ngModel)]="subject"
+        name="subject"
         id="subject"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
         placeholder="Diga como posso te ajudar"
@@ -95,6 +99,8 @@
       >
       <textarea
         id="message"
+        [(ngModel)]="message"
+        name="message"
         rows="4"
         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
         placeholder="Sua mensagem..."
