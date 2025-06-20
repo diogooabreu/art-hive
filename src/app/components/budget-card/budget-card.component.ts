@@ -4,6 +4,7 @@ import { OrdersService } from '../../services/orders-service.service';
 import { NotificationsService } from '../../services/notifications-service.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-budget-card',
@@ -20,18 +21,24 @@ export class BudgetCardComponent {
   message = '';
 
   constructor(
-    private orderSrevice: OrdersService,
-    private notification: NotificationsService
-  ) { }
+    private orderService: OrdersService,
+    private notification: NotificationsService,
+    private router: Router
+  ) {}
 
   async handleSubmit() {
     try {
       const order = new Order(this.email, this.subject, this.message);
-      await this.orderSrevice.createOrder(order);
-      this.notification.succes("Pedido realizado com sucesso", "Sucesso");
+      await this.orderService.createOrder(order);
+      this.notification.succes('Pedido enviado com sucesso!', 'Sucesso');
+
       this.email = this.subject = this.message = '';
     } catch (err) {
-      this.notification.error("Erro ao fazer o pedido", "Erro");
+      this.notification.error('Erro ao enviar pedido', 'Erro');
     }
+  }
+
+  handleNavigate() {
+    this.router.navigate(['/orders']);
   }
 }

@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AuthGuard } from './_guards/auth.guard';
+import { OrdersListComponent } from './pages/orders-list/orders-list.component';
 
 export const routes: Routes = [
   {
@@ -45,6 +46,13 @@ export const routes: Routes = [
       },
     ],
   },
+
+  {
+    path: 'orders',
+    component: OrdersListComponent,
+    canActivate: [AuthGuard],
+  },
+
   {
     path: '**',
     component: NotFoundComponent,
