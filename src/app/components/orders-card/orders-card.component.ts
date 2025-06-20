@@ -4,6 +4,7 @@ import { OrdersService } from '../../services/orders-service.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
+  standalone: true,
   selector: 'order-card',
   imports: [
     CommonModule
@@ -24,6 +25,15 @@ export class OrdersCardComponent implements OnInit {
       } catch (err) {
         console.error('Erro ao carregar pedidos:', err);
       }
+    }
+  }
+
+  async deleteOrder(id: string) {
+    try {
+      await this.ordersService.deleteOrder(id);
+      this.orders = this.orders.filter(order => order.id !== id);
+    } catch (error) {
+      console.error('Erro ao deletar pedido:', error);
     }
   }
 }
