@@ -1,0 +1,21 @@
+<div class="fixed top-5 right-5 space-y-4 z-50">
+  <div *ngFor="let n of notifications"
+       class="w-80 p-4 rounded-lg shadow-sm border border-gray-300"
+       [ngClass]="{
+         'border-green-500 bg-green-700 text-gray-800': n.type === 'success',
+         'border-red-500 bg-red-700 text-white': n.type === 'error',
+         'border-blue-500 bg-yellow-400 text-gray-800': n.type === 'info'
+       }"
+       role="alert">
+
+    <div class="flex items-center justify-between mb-2">
+      <span class="text-sm font-semibold">{{ n.title || n.type?.toUpperCase() }}</span>
+      <button (click)="remove(n)" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+        ✕
+      </button>
+    </div>
+
+    <div class="text-sm font-normal">{{ n.message }}</div>
+    <div *ngIf="n.details" class="text-xs text-gray-500 mt-1">{{ n.details }}</div>
+  </div>
+</div>

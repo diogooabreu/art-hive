@@ -1,0 +1,14 @@
+<div class="flex flex-wrap justify-center gap-3 m-3 max-w-screen-xl mx-auto">
+  @for (artwork of artworks; track artwork.id) {
+  <app-artwork-card
+    [id]="artwork.id"
+    [title]="artwork.title"
+    [description]="artwork.description"
+    [imageUrl]="artwork.imageUrl"
+    [artist_friend_1]="artwork.friends.friend_1"
+    [artist_friend_2]="artwork.friends.friend_2"
+    [artist_friend_3]="artwork.friends.friend_3"
+    [artist_name]="artwork.artist_name"
+  />
+  }
+</div>
