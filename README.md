@@ -3,8 +3,11 @@
 Este projeto tem como objetivo implementar progressivamente e de forma didática uma aplicação web inspirada em sites de portfolio artístico, como DeviantArt e Artstation.
 
 O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
+## Video Apresentação
+https://youtu.be/OnenfdwXnt4
 
 ## Endereço de Deploy - GitHub Pages
+https://diogooabreu.github.io/art-hive
 
 ## Protótipo
 
